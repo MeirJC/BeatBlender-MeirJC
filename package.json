@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "deploy": "npm i --prefix server",
+    "start": "node index.js",
+    "deploy": "npm i",
     "server": "node index.js",
     "public": "npm start --prefix public",
     "copy": "cp -r public/build server/",
