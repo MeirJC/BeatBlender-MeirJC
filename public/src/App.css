@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+:root {
+  --neonblue: #5062ffff;
+  --white: #fbfbffff;
+  --black: #040f16ff;
+  --red: #fe6c0bff;
+  --cyan: #01baefff;
+}
+
+/* 
+?? -- Colors list -- 
+--rich-black-fogra-29: #040f16ff;
+--neon-blue: #5062ffff;
+--safety-orange-blaze-orange: #fe6c0bff;
+--cyan-process: #01baefff;
+--ghost-white: #fbfbffff;
+*/
+
 /* .App-header {
   background-color: #282c34;
   min-height: 100vh;

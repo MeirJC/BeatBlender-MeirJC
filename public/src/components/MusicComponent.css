@@ -1,0 +1,48 @@
+:root {
+  --neonblue: #5062ffff;
+  --white: #fbfbffff;
+  --black: #040f16ff;
+  --red: #fe6c0bff;
+  --cyan: #01baefff;
+  --play: #849324;
+  --stop: #fd151b;
+  --hover: #ffb30f;
+}
+
+
+
+button {
+  font-size: 1.5rem;
+  border-radius: 0.35rem 0.75rem;
+  box-shadow: 0px 8px 8px var(--black);
+}
+
+.ensamble button {
+  border: 3px solid var(--white);
+  padding: 0.5rem 1.8rem;
+  margin: 0.8rem;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.ensamble .redBtn {
+  background-color: var(--stop);
+}
+
+.ensamble .greenBtn {
+  background-color: var(--play);
+}
+
+.ensamble button {
+  transition: all 0.25s ease-in-out;
+}
+
+.ensamble button:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 10px var(--hover);
+}
+
+.ensamble button:active {
+  transform: scale(0.9);
+  box-shadow: 0px 8px 8px var(--cyan);
+}

@@ -1,0 +1,155 @@
+/* 
+?? -- Colors list -- 
+--rich-black-fogra-29: #040f16ff;
+--neon-blue: #5062ffff;
+--safety-orange-blaze-orange: #fe6c0bff;
+--cyan-process: #01baefff;
+--ghost-white: #fbfbffff;
+*/
+:root {
+  --neonblue: #5062ffff;
+  --white: #fbfbffff;
+  --black: #040f16ff;
+  --red: #fe6c0bff;
+  --cyan: #01baefff;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  color: var(--white);
+  transition: 0.55s;
+  padding: 10px;
+  animation: rotate 2s infinite linear;
+  border-radius: 100px;
+  box-shadow: 0px 0px 6px #f58c40;
+}
+
+.logo:hover {
+  color: #f58c40;
+  text-shadow: var(--red) 3px 3px 3px;
+  background-color: var(--secondry);
+  transform: rotate(5.5deg);
+  box-shadow: 0px 0px 16px var(--cyan);
+
+}
+
+.navbar {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--red);
+  font-weight: 600;
+  background-color: var(--black);
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 2rem - 60px);
+  background-color: var(--black);
+}
+
+.nav-item:nth-child(3) {
+  margin-right: auto;
+}
+
+.nav-item {
+  padding: 1rem;
+  height: 100%;
+  list-style-type: none;
+
+}
+
+.nav-item a:hover {
+  color: #fff;
+  text-shadow: 0px 0px 20px var(--cyan);
+  transform: translateY(10px);
+}
+
+.nav-item a {
+  color: var(--white);
+  transition: 0.3s;
+  text-decoration: none;
+  color: var(--red);
+  transition: 0.4s ease-in-out;
+}
+
+.hamburger {
+  display: none;
+
+}
+
+/* animation to rotate infinity */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    /* box-shadow: -2px -2px 4px #f58c40; */
+  }
+
+  50% {
+    transform: rotate(180deg);
+    /* box-shadow: -2px -2px 4px #f58c40; */
+  }
+
+  100% {
+    transform: rotate(360deg);
+    /* box-shadow: -2px -2px 4px #f58c40; */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    left: -100%;
+    top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    width: 100%;
+    height: calc(100% - 100px);
+    transition: 0.5s;
+    z-index: 5;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1.4rem;
+    font-size: 1.5rem;
+  }
+
+  .nav-item a {
+    color: var(--midgrey);
+
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-item:nth-child(2) {
+    margin: 1.4rem;
+
+  }
+
+  .nav-item:hover {
+    background-color: initial;
+  }
+
+  .nav-item a:hover {
+    color: var(--darkgrey);
+    text-shadow: 0 0 0;
+  }
+}

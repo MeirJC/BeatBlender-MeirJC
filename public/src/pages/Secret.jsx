@@ -3,6 +3,8 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+// import "../index.css";
+
 function Secret() {
   const navigate = useNavigate();
   const [cookies, , removeCookie] = useCookies(["jwt"]);
@@ -37,13 +39,15 @@ function Secret() {
     navigate("/login");
   };
   return (
-    <>
+    <div className="container">
       <div className="private">
-        <h1>Super Secret Page</h1>
-        <button onClick={logOut}>Log Out</button>
+        <h1 className="welcome-text-head">Welcome to BeatBlender</h1>
+        <button className="logout-btn" onClick={logOut}>
+          Log Out
+        </button>
       </div>
       <ToastContainer />
-    </>
+    </div>
   );
 }
 

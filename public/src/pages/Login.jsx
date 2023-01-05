@@ -55,37 +55,48 @@ function Login() {
 
   return (
     <div className="container">
-      <h2>Login Account</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            autoComplete="on"
-            type="email"
-            id="email"
-            name="email"
-            onChange={(e) =>
-              setValues({ ...values, [e.target.name]: e.target.value })
-            }
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            autoComplete="on"
-            type="password"
-            id="password"
-            name="password"
-            onChange={(e) =>
-              setValues({ ...values, [e.target.name]: e.target.value })
-            }
-          />
-        </div>
-        <button type="submit">Submit</button>
-        <span>
-          Dont have an account? <Link to="/register">Register</Link>
-        </span>
-      </form>
+      <h1 className="main-head">
+        <span className="markup main-dist">B</span>eat
+        <span className="markup main-dist">B</span>
+        lender
+      </h1>
+      <p className="subtext">Mix and Chill</p>
+      <div className="form-container">
+        <h2>Login Account</h2>
+        <form className="form" onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input
+              autoComplete="on"
+              type="email"
+              id="email"
+              name="email"
+              onChange={(e) =>
+                setValues({ ...values, [e.target.name]: e.target.value })
+              }
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password:</label>
+            <input
+              autoComplete="on"
+              type="password"
+              id="password"
+              name="password"
+              onChange={(e) =>
+                setValues({ ...values, [e.target.name]: e.target.value })
+              }
+            />
+          </div>
+          <button className="log-btn" type="submit">
+            Submit
+          </button>
+          <span>
+            Dont have an account? <Link to="/register">Register</Link>
+          </span>
+        </form>
+      </div>
+
       <ToastContainer />
     </div>
   );

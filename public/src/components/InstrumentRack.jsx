@@ -1,6 +1,6 @@
 //! -----===== /// MAIN COMPONENT - CHILD \\\=====-----
 import React, { useState, useEffect } from "react";
-
+import "./MusicComponent.css";
 function InstrumentRack({
   Links,
   ctx,
