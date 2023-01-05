@@ -128,18 +128,25 @@
   .nav-item {
     margin: 1.4rem;
     font-size: 1.5rem;
+
+  }
+
+  .nav-item :first-child {
+    position: relative;
+    top: 150px
   }
 
   .nav-item a {
     color: var(--midgrey);
-
+    background-color: #eeeeee77;
+    padding: 1rem 2rem;
   }
 
   .hamburger {
     display: flex;
   }
 
-  .nav-item:nth-child(2) {
+  .nav-item:nth-child(3) {
     margin: 1.4rem;
 
   }

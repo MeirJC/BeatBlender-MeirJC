@@ -52,6 +52,7 @@ function InstrumentRack({
       });
     });
   };
+
   //----------------------------------------------------------------------
   //? Function to handle the click event of the audio file buttons
   const handleButtonClick = (i) => {
@@ -115,14 +116,14 @@ function InstrumentRack({
   }
 
   return (
-    <div style={{ border: "3px solid green", margin: "10px" }}>
+    <div className="gridlane">
       {audioFiles.map((audioFile, i) => (
         <div
+          className="btnContainer"
           key={Math.floor(Math.random() * 10000000)}
-          style={{ display: "inline-block" }}
         >
           <button onClick={() => handleButtonClick(i)}>
-            Audio File {i + 1}
+            {`CLIP ${i + 1}`}
           </button>
         </div>
       ))}

@@ -121,6 +121,7 @@ function EnsambleRack() {
       {ctx && (
         <div key={"set1"}>
           <InstrumentRack
+            leftInst={"Drums"}
             Links={audioFiles.drums}
             ctx={ctx}
             setLoaded={setLoaded}
@@ -132,6 +133,7 @@ function EnsambleRack() {
             key={"drums"}
           />
           <InstrumentRack
+            leftInst={"Bass"}
             Links={audioFiles.bass}
             ctx={ctx}
             setLoaded={setLoaded}
@@ -143,6 +145,7 @@ function EnsambleRack() {
             key={"bass"}
           />
           <InstrumentRack
+            leftInst={"Lead"}
             Links={audioFiles.guitar}
             ctx={ctx}
             setLoaded={setLoaded}
@@ -154,6 +157,7 @@ function EnsambleRack() {
             key={"guitar"}
           />
           <InstrumentRack
+            leftInst={"Keys"}
             Links={audioFiles.piano}
             ctx={ctx}
             setLoaded={setLoaded}
