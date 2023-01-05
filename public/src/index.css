@@ -13,8 +13,15 @@
 } */
 
 /* 
-?? -- Colors list -- 
---rich-black-fogra-29: #040f16ff;
+
+/* 
+Fonts
+    font-family: 'Lobster', cursive;
+
+    font-family: 'Signika Negative', sans-serif;
+*/
+/*
+?? -- Colors list -- --rich-black-fogra-29: #040f16ff;
 --neon-blue: #5062ffff;
 --safety-orange-blaze-orange: #fe6c0bff;
 --cyan-process: #01baefff;
@@ -34,6 +41,7 @@
 html {
   font-size: calc(15px + 0.390625vw);
   color: var(--black);
+  font-family: 'Signika Negative', sans-serif;
 }
 
 * {
@@ -50,7 +58,8 @@ body {
   align-items: center;
   background-color: var(--neonblue);
   overflow: hidden;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: 'Signika Negative', sans-serif;
 }
 
 .container {
@@ -69,12 +78,13 @@ body {
 }
 
 .main-head {
-  margin-bottom: 1vmin;
+  /* margin-bottom: 1vmin; */
   font-size: clamp(2.2rem, 18vw, 4.6rem);
   color: var(--white);
   letter-spacing: 5px;
   font-weight: 600;
   text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  font-family: 'Lobster', cursive;
 }
 
 .main-head span {
@@ -88,6 +98,8 @@ body {
   text-transform: none;
   line-height: 1;
   color: var(--white);
+  font-family: 'Lobster', cursive;
+
 }
 
 .form-container h2 {

@@ -29,6 +29,8 @@ function EnsambleRack() {
   //----------------------------------------------------------------------
   //? state to trigger PLay/Stop in child components
   const [playTrigger, setPlayTrigger] = useState(false);
+  //----------------------------------------------------------------------
+  const [channelName, setChannelName] = useState([]);
   //======================================================================
   //! -----=====\\\ Audio Files ///=====-----
   //? complete url list to be paeeed to each kit
@@ -107,7 +109,8 @@ function EnsambleRack() {
       console.log(`allLoad state is ${allLoaded}, not all instrument loaded`);
       // console.log("Not all Loaded!", "allLoaded", allLoaded, "loaded", loaded);
     }
-  }, [ctx, playState, loaded, allLoaded]);
+    setChannelName(["Drums", "Bass", "Guitar", "Piano"]);
+  }, [ctx, playState, loaded, allLoaded, setChannelName]);
 
   // console.log("activeAudioFile in EnsambleRack", activeAudioFile);
   return (
@@ -121,7 +124,7 @@ function EnsambleRack() {
       {ctx && (
         <div key={"set1"}>
           <InstrumentRack
-            leftInst={"Drums"}
+            channelName={channelName[0]}
             Links={audioFiles.drums}
             ctx={ctx}
             setLoaded={setLoaded}
@@ -133,7 +136,7 @@ function EnsambleRack() {
             key={"drums"}
           />
           <InstrumentRack
-            leftInst={"Bass"}
+            channelName={channelName[1]}
             Links={audioFiles.bass}
             ctx={ctx}
             setLoaded={setLoaded}
@@ -145,7 +148,7 @@ function EnsambleRack() {
             key={"bass"}
           />
           <InstrumentRack
-            leftInst={"Lead"}
+            channelName={channelName[2]}
             Links={audioFiles.guitar}
             ctx={ctx}
             setLoaded={setLoaded}
@@ -157,7 +160,7 @@ function EnsambleRack() {
             key={"guitar"}
           />
           <InstrumentRack
-            leftInst={"Keys"}
+            channelName={channelName[3]}
             Links={audioFiles.piano}
             ctx={ctx}
             setLoaded={setLoaded}

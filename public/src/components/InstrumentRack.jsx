@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./MusicComponent.css";
 function InstrumentRack({
+  channelName,
   Links,
   ctx,
   setLoaded,
@@ -117,6 +118,7 @@ function InstrumentRack({
 
   return (
     <div className="gridlane">
+      <h3 id="instrumentName">{channelName}</h3>
       {audioFiles.map((audioFile, i) => (
         <div
           className="btnContainer"
